@@ -14,11 +14,11 @@ const UserRowContainer = ({
 	onUserRemove,
 }) => {
 	const [initialRoleId, setInitialRoleId] = useState(userRoleId);
-	const [selectedRoleId, setselectedRoleId] = useState(userRoleId);
+	const [selectedRoleId, setSelectedRoleId] = useState(userRoleId);
 	const requestServer = useServerRequest();
 
 	const onRoleChange = ({ target }) => {
-		setselectedRoleId(Number(target.value));
+		setSelectedRoleId(Number(target.value));
 	};
 
 	const onRoleSave = (userId, newUserRoleId) => {
