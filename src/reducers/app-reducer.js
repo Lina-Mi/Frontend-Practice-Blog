@@ -2,6 +2,12 @@ import { ACTION_TYPE } from '../actions';
 
 const initialAppState = {
 	wasLogiut: false,
+	modal: {
+		isOpen: false,
+		text: '',
+		onConfirm: () => {},
+		onCancel: () => {},
+	},
 };
 
 export const appReducer = (state = initialAppState, action) => {

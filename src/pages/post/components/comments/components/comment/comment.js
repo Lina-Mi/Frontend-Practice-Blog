@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { Icon } from '../../../../components';
-import { useServerRequest } from '../../../../hooks';
-import { removeCommentAsync } from '../../../../actions';
+import { Icon } from '../../../../../../components';
+import { useServerRequest } from '../../../../../../hooks';
+import { removeCommentAsync } from '../../../../../../actions';
 import styled from 'styled-components';
 
 const CommentContainer = ({ className, postId, id, author, publishedAt, content }) => {
