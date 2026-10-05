@@ -1,4 +1,4 @@
-import { generateDate } from '../utils/generateDate';
+import { generateDate } from '../utils/generate-date';
 
 export const addPost = ({ imageUrl, title, content }) =>
 	fetch('http://localhost:3005/posts', {

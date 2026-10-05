@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { openModal, CLOSE_MODAL, removePostAsync } from '../../../../action';
+import { openModal, CLOSE_MODAL, removePostAsync } from '../../../../actions';
 import { useServerRequest } from '../../../../hooks';
 import { Icon } from '../../../../components';
 import { checkAccess } from '../../../../utils';
@@ -80,3 +81,9 @@ export const SpecialPanel = styled(SpecialPanelContainer)`
 		display: flex;
     font-
 	}`;
+
+SpecialPanel.propTypes = {
+	id: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	editButton: PropTypes.node.isRequired,
+};

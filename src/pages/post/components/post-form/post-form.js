@@ -1,9 +1,10 @@
+import { PROP_TYPE } from '../../../../constants';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Icon, Input } from '../../../../components';
 import { useServerRequest } from '../../../../hooks';
-import { savePostAsync } from '../../../../action';
+import { savePostAsync } from '../../../../actions';
 import { SpecialPanel } from '../special-panel/special-panel';
 import { sanitazeContent } from './utils';
 import styled from 'styled-components';
@@ -96,3 +97,7 @@ export const PostForm = styled(PostFormContainer)`
 		white-space: pre-line;
 	}
 `;
+
+PostForm.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};
